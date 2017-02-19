@@ -48,25 +48,33 @@ npm install angular --save-dev
 #start with angular module, controller, factory example
 
 var myApp = angular.module('myApp',[])
+
 myApp.controller('firstCntrl',function($scope, myFactory) {
+
     $scope.name= myFactory.getName();
+
 })
+
 myApp.factory('myFactory',factoryFunction);
 
 factoryFunction() {
     var name = 'anand';
+
     function getName() {
+
         return name;
+
     } 
+
     return {
         getName: getName
     }
 }
 #index.html
 <!doctype html>
-<html ng-app="myApp">
+"<html ng-app="myApp">
     <script src="node_modules/angular/angular.js"></script>
     <body>
         <h1 ng-controller="firstCntrl">Welcome page <span ng-bind='name'></span></h1>
     </body>
-</html>
+</html>"
