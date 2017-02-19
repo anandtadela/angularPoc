@@ -72,9 +72,9 @@ factoryFunction() {
 }
 #index.html
 <!doctype html>
-"<html ng-app="myApp">
+<!--<html ng-app="myApp">
     <script src="node_modules/angular/angular.js"></script>
     <body>
         <h1 ng-controller="firstCntrl">Welcome page <span ng-bind='name'></span></h1>
     </body>
-</html>"
+</html>-->
