@@ -1,6 +1,28 @@
 <!doctype html>
-<html>
+<html ng-app="myApp">
+    <script src="node_modules/angular/angular.js"></script>
     <body>
-        <h1>Welcome page</h1>
+        <h1 ng-controller="firstCntrl">Welcome page <span ng-bind='name'></span></h1>
     </body>
+     <script type="text/javascript">
+    var myApp = angular.module("myApp",[]);
+    myApp.service('myFactory',myFactoryFunction);
+    function myFactoryFunction() {
+        var name = "anand rao tadela";
+        function getName() {
+            return name;
+        }
+        return {
+            getName: getName
+        }
+    } 
+    myApp.controller('firstCntrl',function($scope,myFactory){
+        $scope.name = myFactory.getName();
+       /*setTimeout(function () {
+            $scope.$apply(function () {
+                $scope.name = "Timeout called!";
+            });
+        }, 2000);*/
+    }); 
+    </script>
 </html>
