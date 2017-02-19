@@ -5,7 +5,9 @@ angular poc will have all the features with the examples
 https://github.com/
 #configure user name password in Visual Studio Code to commit and push the code to remote origin
 git config --global --get-all user.name 'username'
+
 git config --global --get-all user.email 'email@email.com'
+
 git config --global --get-all user.password  'password'
 
 #create package.json to start local host
