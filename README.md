@@ -72,9 +72,52 @@ factoryFunction() {
 }
 #index.html
 <!doctype html>
-<!--<html ng-app="myApp">
-    <script src="node_modules/angular/angular.js"></script>
+##<html ng-app="myApp">
+     <script src="node_modules/angular/angular.js"></script>
     <body>
         <h1 ng-controller="firstCntrl">Welcome page <span ng-bind='name'></span></h1>
     </body>
-</html>-->
+    </html>
+
+#To run unit test cases
+install nodejs v6
+#install protractor
+npm install -g protractor
+
+webdriver-manager update
+
+#need jdk to start webdriver manager
+
+webdriver-manager start
+
+##example 
+// spec.js
+describe('Protractor Demo App', function() {
+  it('should have a title', function() {
+    browser.get('http://juliemr.github.io/protractor-demo/');
+
+    expect(browser.getTitle()).toEqual('Super Calculator');
+  });
+});
+
+// conf.js
+exports.config = {
+  framework: 'jasmine',
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: ['spec.js']
+}
+
+#to run test cases
+
+protractor conf.js
+
+## to run on specific browser
+// conf.js
+exports.config = {
+  framework: 'jasmine',
+  seleniumAddress: 'http://localhost:4444/wd/hub',
+  specs: ['spec.js'],
+  capabilities: {
+    browserName: 'firefox'
+  }
+}
