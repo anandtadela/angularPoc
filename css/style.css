@@ -6,13 +6,11 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none; }
-
 nav li {
   display: inline-block; }
-
 nav a {
   display: block;
-  padding: 6px 12px;
+  padding: 6px 16px;
   text-decoration: none; }
 
 .box {
@@ -45,3 +43,5 @@ article[role="main"] {
 aside[role="complementary"] {
   float: right;
   width: 31.25%; }
+
+/*# sourceMappingURL=style.css.map */

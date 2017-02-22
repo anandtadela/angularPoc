@@ -134,3 +134,7 @@ exports.config = {
     browserName: 'firefox'
   }
 }
+#sass compiler
+npm install sass
+
+sass sass/style.scss css/style.cssnpm 
