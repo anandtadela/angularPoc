@@ -102,10 +102,12 @@ describe('Protractor Demo App', function() {
 
 // conf.js
 exports.config = {
-  framework: 'jasmine',
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['spec.js']
-}
+  specs: ['todo-spec.js'],
+  capabilities: {
+    'browserName': 'firefox'
+    }
+};
 
 #to run test cases
 
