@@ -139,5 +139,19 @@ npm install sass
 
 sass sass/style.scss css/style.css
 
-#install jshint for javascript standards
-npm install -g jshint
+#install jslint visual studio code extensions...for javascript standards
+
+ext install jslint
+
+#test runner
+
+npm install -g karma --save-dev
+
+npm install karma-firefox-launcher
+
+npm install karma-safari-launcher
+
+npm install karma-opera-launcher
+
+
+
