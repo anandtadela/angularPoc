@@ -137,4 +137,7 @@ exports.config = {
 #sass compiler
 npm install sass
 
-sass sass/style.scss css/style.cssnpm 
+sass sass/style.scss css/style.css
+
+#install jshint for javascript standards
+npm install -g jshint
